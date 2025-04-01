@@ -1,0 +1,7 @@
+---
+- name: Test playbook using community.general
+  hosts: rh95-ug.example.com
+  gather_facts: false
+  tasks:
+    - name: Ping using community.general.ping
+      community.general.ping:
