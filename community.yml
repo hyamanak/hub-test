@@ -1,9 +1,9 @@
-- name: Test htpasswd module from community.general
+---
+- name: Test community.crypto module
   hosts: rh95-ug.example.com
   gather_facts: false
   tasks:
-    - name: Create htpasswd entry
-      community.general.htpasswd:
-        path: /tmp/.htpasswd
-        name: testuser
-        password: testpass
+    - name: Generate a private key
+      community.crypto.openssl_privatekey:
+        path: /tmp/testkey.pem
+        size: 2048
