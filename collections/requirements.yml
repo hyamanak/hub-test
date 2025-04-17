@@ -1,4 +1,4 @@
 ---
 collections:
   - name: community.crypto
-    source: https://192.168.1.9/api/galaxy/content/community/
+    version: 2.6.0
